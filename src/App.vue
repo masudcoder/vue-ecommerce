@@ -1,18 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div style="border:10px solid red">
+   <Header />
+
+   <div  style="border:5px solid blue">
+    <!-- component matched by the route will render here -->
+    <router-view></router-view>
   </div>
+   <Footer />
+  </div>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+   Header, Footer
+  },
+  data() {
+      return {
+         todosData:[],
+         var1:"variable1",
+         cId:[1,2,6],
+         firstName: 'First NAme',
+         lastName: 'Last NAme'
+      }
+  },
+
+ 
+
 }
 </script>
 
