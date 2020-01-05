@@ -4,6 +4,9 @@ import App from './App.vue'
 import ProductDetails from './components/ProductDetails.vue'
 import Landing from './components/Landing.vue'
 import Cart from './components/Cart.vue'
+import Checkout from './components/Checkout.vue'
+import GuestCheckout from './components/GuestCheckout.vue'
+import Thanks from './components/Thanks.vue'
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
@@ -25,6 +28,23 @@ const router = new VueRouter({
             path: '/cart',
             name: 'Cart',
             component: Cart
+        },
+        {
+            path: '/checkout',
+            name: 'Checkout',
+            component: Checkout
+        },
+        {
+            path: '/guestCheckout',
+            name: 'GuestCheckout',
+            component: GuestCheckout
+
+        },
+        {
+            path: '/thankYou',
+            name: 'Thanks',
+            component: Thanks
+
         }
     ],
 })
